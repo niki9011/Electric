@@ -1,0 +1,20 @@
+{% extends "motors/motorbikes.html" %}
+{% block motorbikes_content %}
+
+<div class="w3-row-padding">
+        {% for bike in bikes %}
+            <div class="w3-quarter">
+                <h4>{{ bike.brand }}<br>{{ bike.model }}</h4>
+                <div class="w3-auto">
+                    <a href="{% url "bike details" bike.id %}"><img src="{{ bike.image.url }}" alt="#"
+                    style="max-width: 220px; max-height: 130px; width:auto"></a>
+                </div>
+                <h3>${{ bike.price }}</h3>
+            </div>
+        {% endfor %}
+    {% if request.user.is_staff %}
+        <p><a href="{% url "bike add" %}" class="btn btn-primary" style=" margin: 25%; margin-top: 1em; padding: 2% 2%;">ADD BIKE</a></p>
+    {% endif %}
+    </div>
+
+{% endblock %}

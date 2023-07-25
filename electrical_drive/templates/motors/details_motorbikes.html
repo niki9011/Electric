@@ -1,0 +1,19 @@
+{% extends "motors/motorbikes.html" %}
+{% load static %}
+{% block motorbikes_content %}
+    <div class="container">
+        <h1>{{ bike.category }}</h1>
+        <h2>{{ bike.brand }}</h2>
+        <h3>{{ bike.model }}</h3>
+        <img src="{{ bike.image.url }}" alt="#"
+                    style="width:500px">
+        <p>{{ bike.description }}</p>
+        <h3>${{ bike.price }}</h3>
+
+{#        <p><a href="#" class="w3-button w3-black w3-padding-large w3-large">BUY NOW</a></p>#}
+        {% if request.user.is_staff %}
+            <p><a href="{% url "bike update" bike.id %}" class="w3-button w3-green w3-padding-large w3-large">UPDATE</a></p>
+            <p><a href="{% url "bike delete" bike.id %}" class="w3-button w3-red w3-padding-large w3-large">DELETE</a></p>
+        {% endif %}
+    </div>
+{% endblock %}

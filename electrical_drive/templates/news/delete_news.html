@@ -1,0 +1,10 @@
+{% extends "news/news.html" %}
+{% block news_content %}
+{% load static %}
+
+    <form method="post" class="container">
+        {% csrf_token %}
+        <p>Are you sure you want to delete "{{ news.model }}"?</p>
+        <button class="w3-button w3-blue w3-padding-large w3-large">DELETE</button>
+    </form>
+{% endblock %}

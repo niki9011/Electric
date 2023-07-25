@@ -1,0 +1,23 @@
+{% extends "news/news.html" %}
+{% block news_content %}
+{% load static %}
+
+    <font color="white">
+
+    <div class="container">
+         <h1>{{ news.category }}</h1>
+
+         <img src="{{ news.image.url }}" alt="#"
+             style="width:500px">
+         <h3>{{ news.description }}</h3>
+         <h3>Data of publication:{{ news.data }}</h3>
+
+{#                <p><a href="#" class="w3-button w3-black w3-padding-large w3-large">BUY NOW</a></p>#}
+                {% if request.user.is_staff %}
+
+        <p><a href="{% url "news update" news.id %}" class="w3-button w3-green w3-padding-large w3-large">UPDATE</a></p>
+
+        <p><a href="{% url "news delete" news.id %}" class="w3-button w3-red w3-padding-large w3-large">DELETE</a></p>
+                {% endif %}
+            </div>
+{% endblock %}

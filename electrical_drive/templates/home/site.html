@@ -1,0 +1,83 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<body>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+<link rel="stylesheet" href="{% static 'JS/scripts.js' %}">
+<link rel="stylesheet" href="{% static 'css/slider.css' %}">
+<link rel="stylesheet" href="{% static 'css/forms.css' %}">
+
+{% include "home/nav.html" %}
+
+<div class="w3-main" style="margin-left:250px">
+
+    <header class="w3-container w3-xlarge w3-blue w3-padding-32">
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="{% static 'images/slide1.jpg' %}" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="{% static 'images/slide2.jpg' %}" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="{% static 'images/slide3.jpg' %}" style="width:100%">
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="#"></span>
+  <span class="#"></span>
+  <span class="#"></span>
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("#");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+
+</script>
+    {% block news_content %}
+    {% endblock %}
+
+
+    </header>
+
+    {% block site_content %}
+    {% endblock %}
+
+
+    {% include "home/footer.html" %}
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% load  static %}
+<link rel="stylesheet" href="{% static 'css/navigation.css' %}">
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:240px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-23">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+      <a href="{% url "home page" %}"><img src="https://static.vecteezy.com/system/resources/thumbnails/007/131/910/small/modern-electric-energy-logo-symbol-cable-letter-e-template-free-vector.jpg" alt="">
+  </div>
+  <div class="w3-padding-60 w3-large w3-text-blue" style="font-weight:bold">
+        {% if user.is_authenticated %}
+            <p><a href="{% url "profile" %}" class="w3-bar-item w3-button">Hello, {{ user.username }}</a></p>
+            <a href="{% url "logout user" %}" class="w3-bar-item w3-button">Logout</a>
+        {% else %}
+            <a href="{% url "login user" %}" class="w3-bar-item w3-button">Login</a>
+            <a href="{% url "register_user" %}" class="w3-bar-item w3-button">Register</a>
+        {% endif %}
+        <br><br>
+        <a href="{% url 'new bike' %}" class="w3-bar-item w3-button">e-Motorbikes</a>
+        <a href="{% url 'new car' %}" class="w3-bar-item w3-button">e-Cars</a>
+        <a href="#" class="w3-bar-item w3-button">e-Bikes</a>
+        <a href="#" class="w3-bar-item w3-button">e-Scooters</a>
+
+
+  </div>
+  <a href="{% url 'contact' %}" class="w3-bar-item w3-button w3-padding">Contact</a>
+  <a href="{% url 'new news' %}" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a>
+</nav>

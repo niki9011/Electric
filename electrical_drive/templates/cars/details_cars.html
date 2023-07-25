@@ -1,0 +1,20 @@
+{% extends "cars/cars.html" %}
+{% load static %}
+{% block cars_content %}
+    <div class="container">
+        <h1>{{ car.category }}</h1>
+        <h2>{{ car.brand }}</h2>
+        <h3>{{ car.model }}</h3>
+        <img src="{{ car.image.url }}" alt="#"
+                    style="width:500px">
+        <p>{{ car.description }}</p>
+
+        <h3>${{ car.price }}</h3>
+
+{#        <p><a href="#" class="w3-button w3-black w3-padding-large w3-large">BUY NOW</a></p>#}
+        {% if request.user.is_staff %}
+            <p><a href="{% url "car update" car.id %}" class="w3-button w3-green w3-padding-large w3-large">UPDATE</a></p>
+            <p><a href="{% url "car delete" car.id %}" class="w3-button w3-red w3-padding-large w3-large">DELETE</a></p>
+        {% endif %}
+    </div>
+{% endblock %}

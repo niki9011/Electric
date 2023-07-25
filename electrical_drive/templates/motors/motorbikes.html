@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+<link rel="stylesheet" href="{% static 'JS/scripts.js' %}">
+<link rel="stylesheet" href="{% static 'css/forms.css' %}">
+<font color="white">
+
+
+{% include "home/nav.html" %}
+
+<div class="w3-main" style="margin-left:250px">
+
+    <header class="w3-container w3-xlarge w3-blue w3-padding-32" >
+        <h1 class="w3-center" >MOTORBIKE</h1>
+{#        <img src="{% static 'images/home.jpg' %}" alt="">#}
+{#        <div class="w3-right">#}
+{#            {% if user.is_authenticated %}#}
+{#                <a href="{% url "profile" %}" class="fa fa-user w3-hover-opacity" title="your profile"></a>#}
+{#                <a href="" class="fa fa-shopping-cart w3-hover-opacity" title="pay now"></a>#}
+{#                <a href="" class="fa fa-search w3-hover-opacity" title="search"></a>#}
+{#            {% endif %}#}
+{#        </div>#}
+    </header>
+
+    {% block motorbikes_content %}
+    {% endblock %}
+
+    {% include "home/footer.html" %}
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<link href="{% static 'css/templatemo_style.css' %}" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+<link rel="stylesheet" href="{% static 'JS/scripts.js' %}">
+<link rel="stylesheet" href="{% static 'css/forms.css' %}">
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>templatemo.com - free website template</title>
+<meta name="keywords" content="free website templates, CSS templates, download HTML page, templatemo.com" />
+<meta name="description" content="templatemo 004 - free CSS website template" />
+{#<body class="w3-content" style="max-width:1200px">#}
+
+{% include "home/nav.html" %}
+
+<div class="w3-main" style="margin-left:250px"div>
+
+{#    <header class="w3-container w3-xlarge w3-gray w3-padding-32" >#}
+{#    </header>#}
+{#        <h1 class="w3-center" >NEWS</h1>#}
+
+    {% block news_content %}
+    {% endblock %}
+
+{#    {% include "home/footer.html" %}#}
+
+
+
+</body>
+</html>
