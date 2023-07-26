@@ -17,7 +17,7 @@ def send_email(request):
             request.POST["subject"],
             template,
             settings.EMAIL_HOST_USER,
-            ["niki901115@gmail.com"],
+            ["nikiprogramist@gmail.com"],
         )
         email.fail_silently = False
         email.send()
