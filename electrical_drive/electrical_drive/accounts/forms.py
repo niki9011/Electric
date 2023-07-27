@@ -1,9 +1,7 @@
 from django.contrib.auth.forms import UserCreationForm
 from django import forms
 from django.contrib.auth import get_user_model
-from django.contrib.auth import forms as auth_forms
 from django.contrib.auth.models import User
-from django.utils.translation import gettext_lazy as _
 from .models import Profile
 
 
