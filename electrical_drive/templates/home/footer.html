@@ -1,10 +1,20 @@
-{#{% load static %}#}
-{##}
-{#<footer class="w3-padding-1 w3-light-grey w3-small w3-center" id="footer">#}
-{#    <div class="w3-row-padding" >#}
-{##}
+{% load static %}
+
+<footer class="w3-padding-1 w3-light-grey w3-small w3-center" id="footer">
+    <div class="w3-row-padding" >
+
 {#        <div class="w3-col s4">#}
-{#            <h4></h4>#}
+
+            <h4></h4>
+            <div class="w1-col s4" style="max-width:1000px">
+            <center>
+            <h4></h4>
+                <i class="fa fa-facebook-official w3-hover-opacity w3-large"></i>
+            <i class="fa fa-instagram w3-hover-opacity w3-large"></i>
+            <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>
+            <i class="fa fa-twitter w3-hover-opacity w3-large"></i>
+            <i class="fa fa-linkedin w3-hover-opacity w3-large"></i>
 {#            <p>Questions? Go ahead.</p>#}
 {#            <form action="{% url "send email" %}" method="POST" target="_blank">#}
 {#                {% csrf_token %}#}
@@ -59,6 +69,12 @@
 {#            <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>#}
 {#            <i class="fa fa-twitter w3-hover-opacity w3-large"></i>#}
 {#            <i class="fa fa-linkedin w3-hover-opacity w3-large"></i>#}
-{#        </div>#}
-{#    </div>#}
-{#</footer>#}
+        </div>
+    </div>
+
+</footer>
+{#<div class="w1-col s4" style="max-width:1000px">#}
+            <center>
+            <h4></h4>
+
+</div>

@@ -12,6 +12,7 @@
 
 {#        <p><a href="#" class="w3-button w3-black w3-padding-large w3-large">BUY NOW</a></p>#}
         {% if request.user.is_staff %}
+
             <p><a href="{% url "bike update" bike.id %}" class="w3-button w3-green w3-padding-large w3-large">UPDATE</a></p>
             <p><a href="{% url "bike delete" bike.id %}" class="w3-button w3-red w3-padding-large w3-large">DELETE</a></p>
         {% endif %}

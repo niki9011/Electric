@@ -1,16 +1,20 @@
 {% extends 'home/site.html' %}
 {% block site_content %}
-    <body style="background-color:powderblue;">
+
+
 
      <div class="w3-row-padding">
-        <div class="w3-col s4">
+        <div class="w3-col s4" style="margin-left:250px">
 
-{#    <div class="container">#}
-            <h1>Hello, {{ user.username }}</h1>
+    <div class="container">
+
+           <h1 style="color:white";>Hello, {{ user.username }}</h1>
+
+{#            <h1>Hello, {{ user.username }} </h1>#}
 {#            <img src="{{ user.image.url }}" alt="">#}
 {#                    style="width:500px">#}
 {#        <form action="{% url "profile edit" %}" method="post" target="_blank">#}
-{#        <form class="w-50 m-auto" method="post" style=" margin: 10%; padding: 5% 5%">#}
+        <form class="w-50 m-auto" method="post" style=" margin: 10%; padding: 5% 5%">
             {{ user_form }}
             {{ profile_form }}
             {% csrf_token %}

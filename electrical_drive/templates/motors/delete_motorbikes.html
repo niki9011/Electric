@@ -3,7 +3,9 @@
 {% block motorbikes_content %}
     <form method="post" class="container">
         {% csrf_token %}
-        <p>Are you sure you want to delete "{{ bike.model }}"?</p>
-        <button class="w3-button w3-blue w3-padding-large w3-large">DELETE</button>
+        <p>Are you sure you want to delete?</p>
+{#        <button class="w3-button w3-blue w3-padding-large w3-large">DELETE</button>#}
+    <button type="submit" class="btn btn-primary" style=" margin: 18%; margin-top: 1em; padding: 0% 0%;">DELETE</button>
+
     </form>
 {% endblock %}
