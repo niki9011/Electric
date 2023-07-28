@@ -19,32 +19,17 @@
 {% include "home/nav.html" %}
 
 <div class="w3-main" style="margin-left:250px">
-
     <header class="w3-container w3-xlarge w3-blue w3-padding-32" >
         <h1 class="w3-center" >MOTORBIKE</h1>
-{#        <img src="{% static 'images/home.jpg' %}" alt="">#}
-{#        <div class="w3-right">#}
-{#            {% if user.is_authenticated %}#}
-{#                <a href="{% url "profile" %}" class="fa fa-user w3-hover-opacity" title="your profile"></a>#}
-{#                <a href="" class="fa fa-shopping-cart w3-hover-opacity" title="pay now"></a>#}
-{#                <a href="" class="fa fa-search w3-hover-opacity" title="search"></a>#}
-{#            {% endif %}#}
-{#        </div>#}
     </header>
 
 
-    {% block motorbikes_content %}
+{% block motorbikes_content %}
+{% endblock %}
 
-    {% endblock %}
-{#<div class="w3-blue w3-center w3-padding-24"><a href={% include "home/footer.html" %}</a>#}
-{#    </div>#}
-{#    {% include "home/footer.html" %}#}
-
-
-
-{#<div class="w3-blue w3-center w3-padding-24"><a href={% include "home/footer.html" %}</a>#}
-{#    </div>#}
+</div>
 </body>
-<div class="w3-blue w3-center w3-padding-64"><a href={% include "home/footer.html" %}</a>
-    </div>
+
+<div class="w3-blue w3-center w3-padding-64"><a href={% include "home/footer.html" %}</a> </div>
+
 </html>
