@@ -6,7 +6,7 @@ from .models import Allnews
 
 
 class AllnewsListView(ListView):
-    template_name = "news/new.html"
+    template_name = "news/news_publication.html"
     context_object_name = "allnews"
     model = models.Allnews
     paginate_by = 12

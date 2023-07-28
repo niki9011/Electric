@@ -6,7 +6,7 @@ from .models import Bikes
 
 
 class BikesListView(ListView):
-    template_name = "motors/new.html"
+    template_name = "motors/motorbike_catalog.html"
     context_object_name = "bikes"
     model = models.Bikes
     paginate_by = 12

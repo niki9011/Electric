@@ -57,4 +57,3 @@ class EditUpdateView(LoginRequiredMixin, UpdateView):
     template_name = "accounts/change-password.html"
     fields = "__all__"
     success_url = reverse_lazy("home page")
-
