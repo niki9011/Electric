@@ -1,4 +1,4 @@
-from django.contrib.auth.views import LogoutView, LoginView, PasswordChangeView, PasswordChangeDoneView
+from django.contrib.auth.views import LogoutView, LoginView, PasswordChangeDoneView
 from django.urls import path
 from electrical_drive.accounts.views import profile, RegisterUserView, EditUpdateView
 
