@@ -3,6 +3,9 @@ from django.core.mail import EmailMessage
 from django.conf import settings
 from django.template.loader import render_to_string
 
+from electrical_drive.contact.forms import ContactForm
+from electrical_drive.contact.models import Contact
+
 
 def send_email(request):
     if request.method == "POST":
@@ -26,4 +29,6 @@ def send_email(request):
 
 
 def contact(request):
-    return render(request, "contact/contact.html")
+    form = ContactForm()
+    context = {"form": form}
+    return render(request, "contact/contact.html", context)

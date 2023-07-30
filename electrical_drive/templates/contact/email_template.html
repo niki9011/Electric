@@ -1,5 +1,28 @@
-{{ message }}
+<!DOCTYPE html>
+<html>
 
-{{ name }}
+<div class="w3-row-padding">
+        <div class="w3-col s4">
+            <h4 style="color:rgb(0,0,11);">Questions? Go ahead.</h4>
+            <form action="{% url "send email" %}" method="post" target="_blank">
+                {{ form }}
+                {% csrf_token %}
+{#                <p><label>#}
+{#                    <input class="w3-input w3-border" type="text" placeholder="Name" name="name" required>#}
+{#                </label></p>#}
+{#                <p><label>#}
+{#                    <input class="w3-input w3-border" type="text" placeholder="Email" name="email" required>#}
+{#                </label></p>#}
+{#                <p><label>#}
+{#                    <input class="w3-input w3-border" type="text" placeholder="Subject" name="subject" required>#}
+{#                </label></p>#}
+{#                <p><label>#}
+{#                    <input class="w3-input w3-border" type="text" placeholder="Message" name="message" required>#}
+{#                </label></p>#}
+                <button type="submit" class="btn btn-primary" style=" margin: 25%; margin-top: 1em; padding: 2% 2%;">Send</button>
+            {% csrf_token %}
+            </form>
+</div>
 
-{{ email }}
+
+</html>

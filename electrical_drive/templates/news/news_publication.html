@@ -3,9 +3,9 @@
 {% load static %}
 {#<div class="w3-main" style="margin-left:250px">#}
 
-    <header class="w3-container w3-xlarge w3-black w3-padding-32">
-        <h1 class="w3-center">NEWS</h1>
-     </header>
+{#    <header class="w3-container w3-xlarge w3-black w3-padding-32">#}
+{#        <h1 class="w3-center">NEWS</h1>#}
+{#     </header>#}
 
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
     <html xmlns="http://www.w3.org/1999/xhtml">
@@ -27,7 +27,6 @@ This is a free CSS template provided by templatemo.com
 {% if request.user.is_staff %}
     <p><a href="{% url "news add" %}" class="btn btn-primary" style=" margin: 25%; margin-top: 1em; padding: 2% 2%;">ADD NEWS</a></p>
 {% endif %}
-
 
         {% for news in allnews %}
             <div class="section_box2" align="justify">

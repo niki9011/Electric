@@ -1,20 +1,48 @@
 {% extends "cars/cars.html" %}
 {% load static %}
 {% block cars_content %}
-    <div class="container">
-        <h1>{{ car.category }}</h1>
-        <h2>{{ car.brand }}</h2>
-        <h3>{{ car.model }}</h3>
-        <img src="{{ car.image.url }}" alt="#"
-                    style="width:500px">
-        <p>{{ car.description }}</p>
 
-        <h3>${{ car.price }}</h3>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+<script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+<script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+<script src="{% static 'assets/js/main.js' %}"></script>
+<link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+<link href="{% static 'css/contact.css' %}" rel="stylesheet">
 
-{#        <p><a href="#" class="w3-button w3-black w3-padding-large w3-large">BUY NOW</a></p>#}
+
+
+<div class="container">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <img src="{{ car.image.url }}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
+            <h3>{{ car.category }}</h3>
+            <p class="fst-italic">
+              {{ car.brand }}
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i>{{ car.model }}</li>
+              <li><i class="ri-check-double-line"></i> {{ car.description }}</li>
+            </ul>
+            <p>
+              ${{ car.price }}
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+
         {% if request.user.is_staff %}
             <p><a href="{% url "car update" car.id %}" class="w3-button w3-green w3-padding-large w3-large">UPDATE</a></p>
             <p><a href="{% url "car delete" car.id %}" class="w3-button w3-red w3-padding-large w3-large">DELETE</a></p>
         {% endif %}
-    </div>
+
 {% endblock %}

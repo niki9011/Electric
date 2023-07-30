@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'electrical_drive.contact',
     'electrical_drive.cars',
     'electrical_drive.news',
+    'electrical_drive.about',
 
 ]
 
