@@ -1,10 +1,10 @@
 {% extends "cars/cars.html" %}
 {% load static %}
 {% block cars_content %}
-
+ <form class="w-50 m-auto" method="post" style=" margin: 20%; margin-top: 1em; padding: 00% 0%">
 <img src="{% static 'images/cars.jpg' %}" width="500" >
 <div class="w3-row-padding">
-   <div class="w3-col s4">
+   <div class="w3-col s12">
     <form class="w-50 m-auto" method="post" style=" margin: 0%; margin-top: 1em; padding: 0% 0%" action="{% url "car add" %}" enctype="multipart/form-data">
         {{ form }}
         {% csrf_token %}

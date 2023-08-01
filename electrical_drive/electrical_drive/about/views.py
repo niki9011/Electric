@@ -4,4 +4,4 @@ from django.shortcuts import render
 
 
 def about(request):
-    return render(request, 'home/about.html')
+    return render(request, 'home/../../templates/about/about.html')

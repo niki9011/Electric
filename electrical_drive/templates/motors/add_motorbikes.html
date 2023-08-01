@@ -1,12 +1,12 @@
 {% extends "motors/motorbikes.html" %}
 {% load static %}
 {% block motorbikes_content %}
-
+<form class="w-50 m-auto" method="post" style=" margin: 20%; margin-top: 1em; padding: 00% 0%">
 <link rel="stylesheet" href="{% static 'css/forms.css' %}">
 <img src="{% static 'images/moto.png' %}" width="500" >
 
 <div class="w3-row-padding">
-   <div class="w3-col s4">
+   <div class="w3-col s12">
     <form method="post" action="{% url "bike add" %}" enctype="multipart/form-data">
 
         {{ form }}
