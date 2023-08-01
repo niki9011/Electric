@@ -1,0 +1,7 @@
+.fixed-text {
+  position: fixed;
+  right: 0;
+  top: 50%; /* Optional: This will vertically center the text */
+  transform: translateY(-50%); /* Optional: This will vertically center the text */
+  /* Add any additional styles you want for the fixed text here */
+}
