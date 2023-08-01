@@ -3,7 +3,9 @@
 {% block news_content %}
 
 <div class="w3-row-padding">
-   <div class="w3-col s4">
+     <form class="w-50 m-auto" method="post" style=" margin: 20%; margin-top: 1em; padding: 00% 0%">
+
+   <div class="w3-col s12">
 <img src="{% static 'images/news.jpeg' %}" width="500" >
     <form method="post" action="{% url "news add" %}" enctype="multipart/form-data">
         {{ form }}
