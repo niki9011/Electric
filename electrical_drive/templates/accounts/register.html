@@ -18,9 +18,10 @@
 0
 {% include "home/nav.html" %}
 
-<p style="text-align:center;"><img src="{% static 'images/register.png' %}" alt="" style="right: " class="center" width="300" height="150">
-
+<p style="text-align:center;"><img src="{% static 'images/register.png' %}" alt="" class="center" width="300" height="150">
+ <div class="container">
     <font color="white">
+
     <form class="w-50 m-auto" method="post" style=" margin: 30%; margin-top: 1em; padding: 0% 0%">
         <h2>Create profile</h2>
         {{ form }}
@@ -30,8 +31,12 @@
         <br>
         <span>Have an account?<a href="{% url "login user" %}">Login in here</a></span>
     </form>
+
     </div>
 
 </body>
+
+{% include 'home/footer.html' %}
+
 </html>
 
