@@ -16,7 +16,7 @@
 <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
 <link href="{% static 'css/contact.css' %}" rel="stylesheet">
 
-<div class="container">
+<div class="container" style=" margin: 20%; margin-top: 1em; padding: 0% 0%">
     <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
     <h1>{{ news.category }}</h1>
         <div class="container" data-aos="fade-up">
@@ -29,8 +29,9 @@
                 <li><i class="ri-check-double-line"></i>{{ news.description }}</li>
             </ul>
             <h6>Data of publication:{{ news.data }}</h6>
-
+        </div>
             {% if request.user.is_staff %}
+                <div class="container" style=" margin: 20%; margin-top: 0em; padding: 0% 0%">
                 <p><a href="{% url "news update" news.id %}" class="w3-button w3-green w3-padding-large w3-large">UPDATE</a></p>
                 <p><a href="{% url "news delete" news.id %}" class="w3-button w3-red w3-padding-large w3-large">DELETE</a></p>
             {% endif %}

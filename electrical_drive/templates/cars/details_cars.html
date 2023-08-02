@@ -14,9 +14,8 @@
 <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
 <link href="{% static 'css/contact.css' %}" rel="stylesheet">
 
-
-
-<div class="container">
+<div class="container" style=" margin: 20%; margin-top: 1em; padding: 0% 0%">
+    <div class="w3-row-padding">
       <div class="container" data-aos="fade-up">
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
@@ -39,8 +38,8 @@
 
       </div>
 
-
         {% if request.user.is_staff %}
+            <div class="container" style=" margin: 20%; margin-top: 0em; padding: 0% 0%">
             <p><a href="{% url "car update" car.id %}" class="w3-button w3-green w3-padding-large w3-large">UPDATE</a></p>
             <p><a href="{% url "car delete" car.id %}" class="w3-button w3-red w3-padding-large w3-large">DELETE</a></p>
         {% endif %}

@@ -21,24 +21,23 @@
 <title>templatemo.com - free website template</title>
 <meta name="keywords" content="free website templates, CSS templates, download HTML page, templatemo.com" />
 <meta name="description" content="templatemo 004 - free CSS website template" />
-{#<body class="w3-content" style="max-width:1200px">#}
 
 {% include "home/nav.html" %}
 
 <div class="w3-main w3-center" style="margin-left:250px"div>
 
-    <header class="w3-container w3-xlarge w3-blue w3-padding-32" >
+    <header class="w3-container w3-xlarge w3-blue w3-padding-32">
         <h1 class="w3-center" >NEWS</h1>
     </header>
-{#        <h1 class="w3-center" style="color:white"  >NEWS</h1>#}
 
-    {% block news_content %}
-    {% endblock %}
-
-
-<li>{% include "home/footer.html" %}</li>
-
+{% block news_content %}
+{% endblock %}
 
 </body>
 
+        </div>
+    </div>
+
+
 </html>
+{% include 'home/footer.html' %}
