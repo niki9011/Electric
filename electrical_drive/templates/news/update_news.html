@@ -3,11 +3,13 @@
 {% load static %}
 
 <div class="w3-row-padding">
-   <div class="w3-col s4">
-    <form method="post" action="" enctype="multipart/form-data">
+   <div class="w3-col s12">
+    <form class="w-50 m-auto" method="post" style=" margin: 20%; margin-top: 1em; padding: 00% 0%" method="post" enctype="multipart/form-data">
+
         {{ form }}
         {% csrf_token %}
-        <button class="w3-button w3-blue w3-padding-large w3-large">UPDATE</button>
+
+        <button class="btn btn-primary" style=" margin: 25%; margin-top: 1em; padding: 2% 2%;">UPDATE</button>
     </form>
 </div>
 {% endblock %}
