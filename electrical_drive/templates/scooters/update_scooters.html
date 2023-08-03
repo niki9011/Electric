@@ -1,0 +1,15 @@
+{% extends "scooters/scooters.html" %}
+{% load static %}
+{% block scooter_content %}
+
+<div class="w3-row-padding">
+   <div class="w3-col s12">
+    <form class="w-50 m-auto" method="post" style=" margin: 20%; margin-top: 1em; padding: 0% 0%" method="post" action="" enctype="multipart/form-data">
+
+        {{ form }}
+        {% csrf_token %}
+
+        <button type="submit" class="btn btn-primary" style=" margin: 18%; margin-top: 1em; padding: 0% 0%;">UPDATE</button>
+    </form>
+</div>
+{% endblock %}

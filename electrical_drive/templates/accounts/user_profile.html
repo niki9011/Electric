@@ -15,18 +15,39 @@
 <link rel="stylesheet" href="{% static 'css/slider.css' %}">
 <link rel="stylesheet" href="{% static 'css/forms.css' %}">
 
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+<script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+<script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+<script src="{% static 'assets/js/main.js' %}"></script>
+<link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+<link href="{% static 'css/contact.css' %}" rel="stylesheet">
+
 {% include "home/nav.html" %}
 
-     <div class="w3-row-padding">
-        <div class="w3-col s4" style="margin-left:250px">
+<div class="container" style=" margin: 20%; margin-top: 1em; padding: 0% 0%">
+         <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content"style=" margin: 25%; margin-top: 5em; padding: 0% 0%; data-aos="fade-right" data-aos-delay="100">
+{#                <img src="{% static 'images/green.jpg' %}" class="img-fluid" alt="">#}
+              <h1 style="color:white";>Hello, {{ user.username }} Welcome to Move Electric </h1>
+            <form class="w-50 m-auto" method="post" style=" margin: 20%; margin-top: 1em; padding: 0% 0%" action="{% url "logout user" %}" enctype="multipart/form-data">
+              {% csrf_token %}
 
-    <div class="container">
+              <button type="submit" class="btn btn-primary" style=" margin: 25%; margin-top: 5em; padding: 0% 0%;">Logout</button>
 
-           <h1 style="color:white";>Hello, {{ user.username }}</h1>
+          </div>
+        </div>
 
-    </div>
-
-
+      </div>
+{#    <form class="w-50 m-auto" method="post" style=" margin: 20%; margin-top: 1em; padding: 0% 0%" action="{% url "logout user" %}" enctype="multipart/form-data">#}
+{#        {% csrf_token %}#}
+{#        <h1>Are you sure you want to delete?</h1>#}
+{#    <button type="submit" class="btn btn-primary" style=" margin: 25%; margin-top: 5em; padding: 0% 0%;">Logout</button>#}
     {% include "home/footer.html" %}
     </div>
 

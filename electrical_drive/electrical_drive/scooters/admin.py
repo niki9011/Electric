@@ -1,3 +1,9 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Scooters
+
+
+@admin.register(Scooters)
+class ScootersAdmin(admin.ModelAdmin):
+    list_filter = ('price',)
+    search_fields = ('brand',)

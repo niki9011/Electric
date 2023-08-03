@@ -7,8 +7,8 @@
   </div>
   <div class="w3-padding-60 w3-large w3-text-blue" style="font-weight:bold">
         {% if user.is_authenticated %}
-            <p><a href="{% url "profile" %}" class="w3-bar-item w3-button">Hello, {{ user.username }}</a></p>
-            <a href="{% url "logout user" %}" class="w3-bar-item w3-button">Logout</a>
+            <p><a href="{% url "profile"%}" class="w3-bar-item w3-button">Hello, {{ user.username }}</a></p>
+{#            <a href="{% url "logout user" %}" class="w3-bar-item w3-button">Logout</a>#}
         {% else %}
             <a href="{% url "login user" %}" class="w3-bar-item w3-button">Login</a>
             <a href="{% url "register_user" %}" class="w3-bar-item w3-button">Register</a>
@@ -16,7 +16,7 @@
         <br><br>
         <a href="{% url 'new bike' %}" class="w3-bar-item w3-button">e-Motorbikes</a>
         <a href="{% url 'new car' %}" class="w3-bar-item w3-button">e-Cars</a>
-        <a href="#" class="w3-bar-item w3-button">e-Scooters</a>
+        <a href="{% url 'new scooter' %}" class="w3-bar-item w3-button">e-Scooters</a>
 
   </div>
   <a href="{% url 'new news' %}" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a>

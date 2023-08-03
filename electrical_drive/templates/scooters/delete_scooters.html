@@ -1,0 +1,10 @@
+{% extends "scooters/scooters.html" %}
+{% load static %}
+{% block scooter_content %}
+    <form method="post" class="container">
+        {% csrf_token %}
+        <h1>Are you sure you want to delete?</h1>
+    <button type="submit" class="btn btn-primary" style=" margin: 25%; margin-top: 5em; padding: 0% 0%;">DELETE</button>
+
+    </form>
+{% endblock %}

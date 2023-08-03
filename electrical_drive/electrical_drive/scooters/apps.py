@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class ScootersConfig(AppConfig):
+class ScooterShopConfig(AppConfig):
     name = 'electrical_drive.scooters'

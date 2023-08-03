@@ -1,0 +1,46 @@
+{% extends "scooters/scooters.html" %}
+{% load static %}
+{% block scooter_content %}
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+<script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+<script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+<script src="{% static 'assets/js/main.js' %}"></script>
+<link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+<link href="{% static 'css/contact.css' %}" rel="stylesheet">
+
+    <div class="container" style=" margin: 20%; margin-top: 1em; padding: 0% 0%">
+         <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <img src="{{ scooter.image.url }}" class="img-fluid" alt="" style="max-width: 220px; max-height: 130px; width:auto">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
+            <h3>{{ scooter.category }}</h3>
+            <p class="fst-italic">
+              {{ scooter.brand }}
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i>{{ scooter.model }}</li>
+              <li><i class="ri-check-double-line"></i> {{ scooter.description }}</li>
+            </ul>
+            <p>
+              ${{ scooter.price }}
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+        {% if request.user.is_staff %}
+            <div class="container" style=" margin: 20%; margin-top: 0em; padding: 0% 0%">
+            <p><a href="{% url "scooter update" scooter.id %}" class="w3-button w3-green w3-padding-large w3-large">UPDATE</a></p>
+            <p><a href="{% url "scooter delete" scooter.id %}" class="w3-button w3-red w3-padding-large w3-large">DELETE</a></p>
+        {% endif %}
+
+{% endblock %}
