@@ -2,9 +2,7 @@ from django.shortcuts import render
 from django.core.mail import EmailMessage
 from django.conf import settings
 from django.template.loader import render_to_string
-
-from electrical_drive.contact.forms import ContactForm
-from electrical_drive.contact.models import Contact
+from .forms import ContactForm
 
 
 def send_email(request):
