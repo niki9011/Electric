@@ -8,7 +8,6 @@
   <div class="w3-padding-60 w3-large w3-text-blue" style="font-weight:bold">
         {% if user.is_authenticated %}
             <p><a href="{% url "profile"%}" class="w3-bar-item w3-button">Hello, {{ user.username }}</a></p>
-{#            <a href="{% url "logout user" %}" class="w3-bar-item w3-button">Logout</a>#}
         {% else %}
             <a href="{% url "login user" %}" class="w3-bar-item w3-button">Login</a>
             <a href="{% url "register_user" %}" class="w3-bar-item w3-button">Register</a>

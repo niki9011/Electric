@@ -1,8 +1,80 @@
+{#{% load static %}#}
+{##}
+{#<!DOCTYPE html>#}
+{#<html>#}
+{#<title>AUTODRIVE</title>#}
+{##}
+{#<body>#}
+{#<meta charset="UTF-8">#}
+{#<meta name="viewport" content="width=device-width, initial-scale=1">#}
+{#<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">#}
+{#<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">#}
+{#<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">#}
+{#<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">#}
+{#<link rel="stylesheet" href="{% static 'css/index.css' %}">#}
+{#<link rel="stylesheet" href="{% static 'JS/scripts.js' %}">#}
+{##}
+{##}
+{#<body class="w3-content" style="max-width:1200px">#}
+{##}
+{#{% include "home/nav.html" %}#}
+{##}
+{#<div class="w3-main" style="margin-left:250px">#}
+{##}
+{#    <header class="w3-container w3-xlarge w3-black w3-padding-32">#}
+{#        <h1 class="w3-center">CONTACT</h1>#}
+{##}
+{##}
+{#<style type="text/css">#}
+{#	html, body{#}
+{#		height: 100%;#}
+{#	}#}
+{##}
+{#	#page-wrapper{#}
+{#		height: 100%;#}
+{#		display: flex;#}
+{#		justify-content: center;#}
+{#		align-items: center;#}
+{#		text-align: center;#}
+{#		background-color: #eaeaea;#}
+{#	}#}
+{##}
+{#	#success-box{#}
+{#		max-width: 800px;#}
+{#		height: auto;#}
+{#		background-color: #fff;#}
+{#		border:1px solid #888;#}
+{#		border-radius: 5px;#}
+{#		padding: 15px;#}
+{#	}#}
+{##}
+{#	#success-box p{#}
+{#		font-size: 18px;#}
+{#	}#}
+{##}
+{#</style>#}
+{##}
+{#<div id="page-wrapper">#}
+{#	<div id="success-box" class="content-block">#}
+{#		<h1>Thanks for reaching out!</h1>#}
+{#		<p>Your message was successfully sent. I will do my best to get back to you in a timely manner :)</p>#}
+{#		<a id="back-btn" class="btn btn-success" href="{% url 'home page' %}">BACK TO HOME PAGE</a>#}
+{#	</div>#}
+{#</div>#}
+{##}
+{##}
+{##}
+{#    <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp"#}
+{#                                                                title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a>#}
+{#    </div>#}
+{##}
+{#</body>#}
+{#</html>#}
+{##}
 {% load static %}
 
 <!DOCTYPE html>
 <html>
-{#<title>AUTODRIVE</title>#}
 
 <body>
 <meta charset="UTF-8">
@@ -13,61 +85,54 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="{% static 'css/index.css' %}">
 <link rel="stylesheet" href="{% static 'JS/scripts.js' %}">
+<link rel="stylesheet" href="{% static 'css/forms.css' %}">
+<link rel="stylesheet" href="{% static 'css/navigation.css' %}">
+<link rel="stylesheet" href="{% static 'css/forms.css' %}">
+<link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+<link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+<link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+<link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+<link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+<link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
 
+<link href="{% static 'css/contact.css' %}" rel="stylesheet">>
 
-{#<body class="w3-content" style="max-width:1200px">#}
+    <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+    <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+    <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <script src="{% static 'assets/js/main.js' %}"></script>
 
 {% include "home/nav.html" %}
 
-<div class="w3-main" style="margin-left:250px">
 
-{#    <header class="w3-container w3-xlarge w3-black w3-padding-32">#}
-{#        <h1 class="w3-center">CONTACT</h1>#}
-
-
-<style type="text/css">
-	html, body{
-		height: 100%;
-	}
-
-	#page-wrapper{
-		height: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		background-color: #eaeaea;
-	}
-
-	#success-box{
-		max-width: 800px;
-		height: auto;
-		background-color: #fff;
-		border:1px solid #888;
-		border-radius: 5px;
-		padding: 15px;
-	}
-
-	#success-box p{
-		font-size: 18px;
-	}
-
-</style>
-
-<div id="page-wrapper">
-	<div id="success-box" class="content-block">
-		<h1>Thanks for reaching out!</h1>
-		<p>Your message was successfully sent. I will do my best to get back to you in a timely manner :)</p>
-		<a id="back-btn" class="btn btn-success" href="{% url 'contact' %}">BACK TO HOME PAGE</a>
-	</div>
+<div class="w3-main w3-center" style="margin-left:250px">
+    <header class="w3-container w3-xlarge w3-blue w3-padding-32" >
+        <h1 class="w3-center" >CONTACT</h1>
+    </header>
 </div>
 
+ <form class="w-50 m-auto"method="post" style=" margin: 25%; margin-top: 1em; padding: 7% 0%; text-align: right;" action="{% url "home page" %}" enctype="multipart/form-data">
+{
+  <font color="white">
+    {% csrf_token %}
+    <h1>Thanks for reaching out!</h1>
+    <p>Your message was successfully sent.</p>
+    <button type="submit" class="btn btn-primary" style="margin: 45%; margin-top: 5em; padding: 0% 0%;">BACK TO HOME PAGE</button>
+  </font>
+</form>
 
+</div>
 
-{#    <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp"#}
-{#                                                                title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a>#}
+    {% include "home/footer.html" %}
+
     </div>
 
 </body>
-</html>
 
+</html>
+{% include "home/footer.html" %}
