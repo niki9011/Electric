@@ -1,21 +1,13 @@
 from django.shortcuts import redirect, render
-from electrical_drive.accounts.forms import RegisterUserForm, UserUpdateForm
+from django.views.generic import UpdateView
+from electrical_drive.accounts.forms import RegisterUserForm
 from django.contrib.auth import views as auth_views, login
 from django.urls import reverse_lazy
 from django.views import generic as views
 
 
-def profile(request):
-    form = UserUpdateForm(request.POST or None)
-    if form.is_valid():
-        form.save()
-        return redirect('home page')
-
-    context = {
-        'form': form
-    }
-
-    return render(request, 'accounts/user_profile.html', context)
+class ProfileUserView(auth_views.TemplateView):
+    template_name = 'accounts/user_profile.html'
 
 
 class RegisterUserView(views.CreateView):
@@ -34,4 +26,3 @@ class RegisterUserView(views.CreateView):
 
 class LoginUserView(auth_views.LoginView):
     template_name = 'accounts/login_user.html'
-
