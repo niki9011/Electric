@@ -1,27 +1,14 @@
 {% extends "news/news.html" %}
 {% block news_content %}
 {% load static %}
-{#<div class="w3-main" style="margin-left:250px">#}
-
-{#    <header class="w3-container w3-xlarge w3-black w3-padding-32">#}
-{#        <h1 class="w3-center">NEWS</h1>#}
-{#     </header>#}
-
-    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-    <html xmlns="http://www.w3.org/1999/xhtml">
 
 <body>
-<!--
-This is a free CSS template provided by templatemo.com
--->
+
 <div id="templatemo_container_wrapper">
 	<div class="templatemo_spacer"></div>
-{#<div id="templatemo_container">#}
-{#<div id="templatemo_top"> <a href="http://www.templatemo.com" target="_parent">Website Templates</a> · <a href="http://www.flashmo.com/" target="_parent">Flash Templates</a> · <a href="#">Company</a> · <a href="#">Contact</a></div>#}
-{#  <div id="templatemo_header">#}
+  <div id="templatemo_header">
       <div id="inner_header">
-{#        <div id="templatemo_site_title">Free CSS Template</div>#}
-{#          <div id="templatemo_site_slogan"><a href="http://www.iwebsitetemplate.com" target="_parent">Website Templates</a> by templatemo.com</div>#}
+
       </div>
   </div>
 {% if request.user.is_staff %}
@@ -36,22 +23,12 @@ This is a free CSS template provided by templatemo.com
    	        {{ news.description }} <br />
    	        <br />
 
-            <div class="publish_date">{{ news.data }} · <a href="{% url 'news details' news.id %}" >DETAILS</a>
+            <div class="publish_date">{{ news.data }}<a href="{% url 'news details' news.id %}">DETAILS</a>
             </div>
+
       	    </div>
         {% endfor %}
-{#{% if request.user.is_staff %}#}
-{#    <p><a href="{% url "news add" %}" class="w3-button w3-blue w3-padding-large w3-large">ADD NEWS</a></p>#}
-{#{% endif %}#}
-
-{#        <div class="section_box2" align="justify">#}
-{#        <div class="post_title">New Flash Player</div>#}
-{#        <div class="text_area">#}
-{#        <img src="{% static 'images/s_flashmo_022_park_20.jpg' %}" alt="Photo Two" title="Photo Two" width="120" height="90" class="templatemo_pic" />#}
-{#   	      Nam sit amet justo vel libero tincidunt dignissim. Fusce ac orci sit amet velit ultrices condimentum. Integer imperdiet  odio ac eros. Ut id massa. Nullam nunc. Vivamus sagittis varius lorem.#}
-{#        Quisque in diam a justo condimentum molestie.<br />#}
-{#        <div class="publish_date">Post Date: 24-10-2020 · Tags: <a href="#">DETAILS</a>#}
-{#          </div>#}
-{#      	</div>#}
+        <div class="section_box2" align="justify">
+        <div class="text_area">
 
 {% endblock %}
