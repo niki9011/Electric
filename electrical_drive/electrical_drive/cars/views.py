@@ -9,7 +9,7 @@ class CarsListView(ListView):
     template_name = "cars/cars_catalog.html"
     context_object_name = "cars"
     model = models.Cars
-    paginate_by = 12
+    # paginate_by = 12
     ordering = ['-id']
 
     def get_context_data(self, **kwargs):
@@ -44,3 +44,5 @@ class CarDeleteView(LoginRequiredMixin, DeleteView):
     fields = "__all__"
     template_name = "cars/delete_cars.html"
     success_url = reverse_lazy("new car")
+
+

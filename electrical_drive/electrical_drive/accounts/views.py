@@ -1,9 +1,9 @@
-from django.shortcuts import redirect, render
-from django.views.generic import UpdateView
 from electrical_drive.accounts.forms import RegisterUserForm
 from django.contrib.auth import views as auth_views, login
 from django.urls import reverse_lazy
 from django.views import generic as views
+
+
 
 
 class ProfileUserView(auth_views.TemplateView):
@@ -26,3 +26,5 @@ class RegisterUserView(views.CreateView):
 
 class LoginUserView(auth_views.LoginView):
     template_name = 'accounts/login_user.html'
+
+
