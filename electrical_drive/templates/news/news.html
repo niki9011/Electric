@@ -16,11 +16,16 @@
 
 {% include "home/nav.html" %}
 
-<div class="w3-main w3-center" style="margin-left:240px"div>
-
-    <header class="w3-container w3-xlarge w3-blue w3-padding-32">
+<div class="w3-main w3-center"  style="margin-left:250px">
+{% if news.subject %}
+    <header class="w3-container w3-xlarge w3-blue w3-padding-32" >
+        <h1 class="w3-center" >{{ news.subject }}</h1>
+    </header>
+{% else %}
+    <header class="w3-container w3-xlarge w3-blue w3-padding-32" >
         <h1 class="w3-center" >NEWS</h1>
     </header>
+{% endif %}
 
 {% block news_content %}
 {% endblock %}

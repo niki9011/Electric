@@ -1,10 +1,24 @@
 {% extends "scooters/scooters.html" %}
 {% load static %}
 {% block scooter_content %}
+
+   <style>
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1em;
+    }
+</style
+
     <form method="post" class="container">
         {% csrf_token %}
         <h1>Are you sure you want to delete?</h1>
+        {{ scooters.category }}
+        {{ scooters.model }}
+        <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <img src="{{ scooters.image.url }}" class="img-fluid" alt="" width="500" height="300">
+          </div>
     <button type="submit" class="btn btn-primary" style=" margin: 25%; margin-top: 5em; padding: 0% 0%;">DELETE</button>
 
-    </form>
 {% endblock %}

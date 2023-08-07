@@ -22,12 +22,12 @@
  <div class="container">
     <font color="white">
 
-    <form class="w-50 m-auto" method="post" style=" margin: 30%; margin-top: 1em; padding: 0% 0%">
+    <form class="w-50 m-auto" method="post" style=" margin: 25%; margin-top: 1em; padding: 0% 0%">
         <h2>Create profile</h2>
         {{ form }}
         {% csrf_token %}
         <br>
-        <button type="submit" class="btn btn-primary" style=" margin: 25%; margin-top: 1em; padding: 0% 0%;" >Register</button>
+        <button type="submit" class="btn btn-primary" style=" margin:0%; margin-top: 1em; padding: 0% 0%;" >Register</button>
         <br>
         <span>Have an account?<a href="{% url "login user" %}">Login in here</a></span>
     </form>
