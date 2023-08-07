@@ -36,7 +36,7 @@
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content"style=" margin: 25%; margin-top: 5em; padding: 0% 0%; data-aos="fade-right" data-aos-delay="100">
                 <img src="{% static 'images/green.jpg' %}" class="img-fluid" alt=""width="400" height="200">>
               <h1 style="color:white";>Hello, {{ user.first_name }}! Welcome to Move Electric! </h1>
-            <form class="w-50 m-auto" method="post" style=" margin: 20%; margin-top: 1em; padding: 0% 0%" action="{% url "logout user" %}" enctype="multipart/form-data">
+            <form class="w-50 m-auto" method="post" style=" margin: 20%; margin-top: 1em; padding: 0% 0%" action="{% url "delete user" profile.id%}" enctype="multipart/form-data">
               {% csrf_token %}
 
               <button type="submit" class="btn btn-primary" style=" margin: 25%; margin-top: 5em; padding: 0% 0%;">Logout</button>
