@@ -1,0 +1,8 @@
+status : name : pass
+
+superuser: niki : niki
+superuser: qna : qna
+
+user1: pesho : pesho12345
+user2: pesho : bobi12345
+user3: pesho : vesi12345
