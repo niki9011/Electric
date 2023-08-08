@@ -3107,7 +3107,7 @@ var trim = String.prototype.trim ?
 
   // filter + sort + layout
   proto.arrange = function( opts ) {
-    // set any options pass
+    // set any options users
     this.option( opts );
     this._getIsInstant();
     // filter, sort, and layout
