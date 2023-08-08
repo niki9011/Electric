@@ -2,23 +2,26 @@
 {% load static %}
 {% block motorbikes_content %}
 
-    <style>
-    {
+<style>
+    .container {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        margin-top: 1em;
+        justify-content: center;
     }
-</style
+</style>
 
-    <form method="post" class="container">
+<form method="post" class="container" enctype="multipart/form-data">
+
+    <h1>Are you sure you want to delete?</h1>
+
+    {{ bikes.category }}
+    {{ bikes.model }}
+
+    <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100"><img src="{{ bikes.image.url }}" class="img-fluid" alt="" width="500" height="300">
+    </div>
+
         {% csrf_token %}
-        <h1>Are you sure you want to delete?</h1>
-        {{ bikes.category }}
-        {{ bikes.model }}
-        <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-            <img src="{{ bikes.image.url }}" class="img-fluid" alt="" width="500" height="300">
-          </div>
-    <button type="submit" class="btn btn-primary" style=" margin: 25%; margin-top: 5em; padding: 0% 0%;">DELETE</button>
+<button type="submit" class="btn btn-primary" style=" margin: 25%; margin-top: 5em; padding: 0% 0%;">DELETE</button>
 
 {% endblock %}
