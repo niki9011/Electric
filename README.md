@@ -1,4 +1,4 @@
-This is Electrical-Drive Website.
+This is the Electric Drive website made with Django.
 
 <img src="https://github.com/niki9011/web-framework/blob/main/electrical_drive/media/screen_web/Screenshot%20from%202023-08-08%2022-06-33.png">
 <img src="https://github.com/niki9011/web-framework/blob/main/electrical_drive/media/screen_web/Screenshot%20from%202023-08-08%2022-06-53.png">
