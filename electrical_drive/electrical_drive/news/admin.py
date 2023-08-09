@@ -1,8 +1,8 @@
 from django.contrib import admin
-from electrical_drive.news.models import Allnews
+from electrical_drive.news.models import AllNews
 
 
-@admin.register(Allnews)
-class AllnewsAdmin(admin.ModelAdmin):
+@admin.register(AllNews)
+class AllNewsAdmin(admin.ModelAdmin):
     list_filter = ('data',)
     search_fields = ('subject',)

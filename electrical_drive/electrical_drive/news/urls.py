@@ -7,5 +7,5 @@ urlpatterns = [
     path('news/add/', views.NewsAddView.as_view(), name="news add"),
     path('news/update/<int:pk>/', views.NewsUpdateView.as_view(), name="news update"),
     path('news/delete/<int:pk>/', views.NewsDeleteView.as_view(), name="news delete"),
-    path('news/', views.AllnewsListView.as_view(), name="new news"),
+    path('news/', views.AllNewsListView.as_view(), name="new news"),
 ]

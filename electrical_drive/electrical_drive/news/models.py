@@ -1,9 +1,8 @@
 import datetime
-
 from django.db import models
 
 
-class Allnews(models.Model):
+class AllNews(models.Model):
     subject = models.CharField(max_length=300, null=False, blank=False)
     image = models.ImageField(upload_to="news_images",)
     description = models.TextField()
@@ -14,5 +13,5 @@ class Allnews(models.Model):
 
     def delete(self, *args, **kwargs):
         storage, path = self.image.storage, self.image.path
-        super(Allnews, self).delete(*args, **kwargs)
+        super(AllNews, self).delete(*args, **kwargs)
         storage.delete(path)

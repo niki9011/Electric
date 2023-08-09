@@ -1,9 +1,8 @@
 from django import forms
-
-from electrical_drive.news.models import Allnews
+from .models import AllNews
 
 
 class NewsForm(forms.ModelForm):
     class Meta:
-        model = Allnews
+        model = AllNews
         fields = "__all__"

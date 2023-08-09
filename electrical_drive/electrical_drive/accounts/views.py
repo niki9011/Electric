@@ -4,8 +4,6 @@ from django.urls import reverse_lazy
 from django.views import generic as views
 
 
-
-
 class ProfileUserView(auth_views.TemplateView):
     template_name = 'accounts/user_profile.html'
 
@@ -26,5 +24,3 @@ class RegisterUserView(views.CreateView):
 
 class LoginUserView(auth_views.LoginView):
     template_name = 'accounts/login_user.html'
-
-

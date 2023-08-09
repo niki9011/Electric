@@ -2,6 +2,7 @@
 {% block scooter_content %}
 
 <div class="w3-row-padding ">
+
         {% for scooter in scooters %}
             <div class="w3-quarter ">
                 <h4>{{ scooter.brand }}<br>{{ scooter.model }}</h4>
@@ -12,9 +13,13 @@
                 <h3>${{ scooter.price }}</h3>
             </div>
         {% endfor %}
+
     {% if request.user.is_staff %}
         <p><a href="{% url "scooter add" %}" class="btn btn-primary " style=" margin: 1%; margin-top: 1em; padding: 2% 2%;">ADD SCOOTER</a></p>
     {% endif %}
+
     </div>
+
 {% include "home/footer.html" %}
+
 {% endblock %}

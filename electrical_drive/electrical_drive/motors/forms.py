@@ -1,6 +1,5 @@
 from django import forms
-
-from electrical_drive.motors.models import Bikes
+from .models import Bikes
 
 
 class BikeForm(forms.ModelForm):

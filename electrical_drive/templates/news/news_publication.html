@@ -11,6 +11,7 @@
 
       </div>
   </div>
+
 {% if request.user.is_staff %}
     <p><a href="{% url "news add" %}" class="btn btn-primary" style=" margin: 25%; margin-top: 1em; padding: 2% 2%;">ADD NEWS</a></p>
 {% endif %}
@@ -28,6 +29,7 @@
 
       	    </div>
         {% endfor %}
+
         <div class="section_box2" align="justify">
         <div class="text_area">
 

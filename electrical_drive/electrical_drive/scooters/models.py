@@ -3,10 +3,10 @@ from django.db import models
 
 class Scooters(models.Model):
 
-    CHOOSES = (('20 mph Scooters', '20 mph Scooters'),
-               ('30 mph Scooters', '30 mph Scooters'),
-               ('30 mph Scooters', '40 mph Scooters'),
-               ('30 mph Scooters', '50 mph Scooters'),
+    CHOOSES = (('20 MPH SCOOTERS', '20 MPH SCOOTERS'),
+               ('30 MPH SCOOTERS', '30 MPH SCOOTERS'),
+               ('40 MPH SCOOTERS', '40 MPH SCOOTERS'),
+               ('50 MPH SCOOTERS', '50 MPH SCOOTERS'),
                )
 
     category = models.CharField(max_length=15, null=False, blank=False, choices=CHOOSES)

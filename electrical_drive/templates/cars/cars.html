@@ -14,25 +14,27 @@
 <link rel="stylesheet" href="{% static 'JS/scripts.js' %}">
 <link rel="stylesheet" href="{% static 'css/forms.css' %}">
 <font color="white">
-{#<link rel="stylesheet" href="{% static 'css/navigation.css' %}">#}
 
 {% include "home/nav.html" %}
 
 <div class="w3-main w3-center"  style="margin-left:250px">
 {% if car.category %}
+
     <header class="w3-container w3-xlarge w3-blue w3-padding-32" >
         <h1 class="w3-center" >{{ car.category }}</h1>
     </header>
+
 {% else %}
     <header class="w3-container w3-xlarge w3-blue w3-padding-32" >
         <h1 class="w3-center" >CARS</h1>
     </header>
-{% endif %}
-    {% block cars_content %}
 
+{% endif %}
+
+    {% block cars_content %}
     {% endblock %}
 
-    </div>
+</div>
 
 </body>
 {% include "home/footer.html" %}

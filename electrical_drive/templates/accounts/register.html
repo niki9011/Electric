@@ -15,28 +15,25 @@
 <link rel="stylesheet" href="{% static 'css/slider.css' %}">
 <link rel="stylesheet" href="{% static 'css/forms.css' %}">
 <font color="white">
-0
+
 {% include "home/nav.html" %}
 
 <p style="text-align:center;"><img src="{% static 'images/register.png' %}" alt="" class="center" width="300" height="150">
- <div class="container">
-    <font color="white">
-
+<div class="container"><font color="white">
     <form class="w-50 m-auto" method="post" style=" margin: 25%; margin-top: 1em; padding: 0% 0%">
         <h2>Create profile</h2>
         {{ form }}
         <br>
-        <button type="submit" class="btn btn-primary" style=" margin:0%; margin-top: 1em; padding: 0% 0%;" >Register</button>
+    <button type="submit" class="btn btn-primary" style=" margin:0%; margin-top: 1em; padding: 0% 0%;" >Register</button>
         {% csrf_token %}
         <br>
         <span>Have an account?<a href="{% url "login user" %}">Login in here</a></span>
     </form>
 
-    </div>
+</div>
 
 </body>
 
 {% include 'home/footer.html' %}
 
 </html>
-

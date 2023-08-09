@@ -1,5 +1,4 @@
 from django import forms
-
 from electrical_drive.cars.models import Cars
 
 
