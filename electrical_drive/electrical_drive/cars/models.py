@@ -24,3 +24,5 @@ class Cars(models.Model):
         storage, path = self.image.storage, self.image.path
         super(Cars, self).delete(*args, **kwargs)
         storage.delete(path)
+
+
