@@ -12,9 +12,10 @@ class Scooters(models.Model):
     category = models.CharField(max_length=15, null=False, blank=False, choices=CHOOSES)
     brand = models.CharField(max_length=25)
     model = models.CharField(max_length=25)
+    power = models.PositiveIntegerField()
     image = models.ImageField(upload_to="motorbikes_images",)
     description = models.TextField()
-    price = models.IntegerField()
+    price = models.PositiveIntegerField()
 
     def __str__(self):
         return f"{self.id}/ {self.model}/ {self.brand}"
