@@ -5,11 +5,13 @@ class Bikes(models.Model):
 
     CHOOSES = (('TURER', 'TURER'),
                ('CROSS', 'CROSS'),
+               ('SPORT', 'SPORT'),
                )
 
     category = models.CharField(max_length=15, null=False, blank=False, choices=CHOOSES)
     brand = models.CharField(max_length=25)
     model = models.CharField(max_length=25)
+    power = models.FloatField(max_length=25)
     image = models.ImageField(upload_to="motorbikes_images",)
     description = models.TextField()
     price = models.IntegerField()
