@@ -11,7 +11,12 @@
     border: 3px solid #E2E8EA;
     border-radius: 70px 0 70px;
 }
-
+.fixed-button {
+    position: fixed;
+    bottom: 20px; /* You can adjust the value to position the button */
+    right: 20px; /* You can adjust the value to position the button */
+    z-index: 1000; /* Make sure the button is above other elements */
+}
 .container {
     padding: 40px;
 }
