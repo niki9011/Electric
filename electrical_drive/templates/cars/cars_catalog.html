@@ -1,10 +1,6 @@
 {% extends "cars/cars.html" %}
 {% block cars_content %}
 
-{% if request.user.is_staff %}
-    <p><a href="{% url "car add" %}" class="btn btn-primary" style=" margin: 1%; margin-top: 1em; padding: 2% 2%;">ADD CAR</a></p>
-{% endif %}
-
 <div class="w3-row-padding">
         {% for car in cars %}
             <div class="w3-quarter">
@@ -16,6 +12,10 @@
                 <h3>${{ car.price }}</h3>
             </div>
         {% endfor %}
+
+    {% if request.user.is_staff %}
+        <p><a href="{% url "car add" %}" class="btn btn-primary" style=" margin: 1%; margin-top: 1em; padding: 2% 2%;">ADD CAR</a></p>
+    {% endif %}
 
     </div>
 

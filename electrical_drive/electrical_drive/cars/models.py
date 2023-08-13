@@ -13,10 +13,9 @@ class Cars(models.Model):
     category = models.CharField(max_length=15, null=False, blank=False, choices=CHOOSES)
     brand = models.CharField(max_length=25)
     model = models.CharField(max_length=25)
-    power = models.PositiveIntegerField()
     image = models.ImageField(upload_to="cars",)
     description = models.TextField()
-    price = models.PositiveIntegerField()
+    price = models.IntegerField()
 
     def __str__(self):
         return f"{self.id}/ {self.model}/ {self.brand}"
