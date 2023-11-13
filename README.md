@@ -1,4 +1,4 @@
-This is the Electric Drive website made with Django.
+This is the Electric Drive website made with Django framework in Python, JavaScript, HTML & CSS, Database - PostgreSQL.
 
 <img src="https://github.com/niki9011/web-framework/blob/main/electrical_drive/media/screen_web/Screenshot%20from%202023-08-08%2022-06-33.png">
 <img src="https://github.com/niki9011/web-framework/blob/main/electrical_drive/media/screen_web/Screenshot%20from%202023-08-08%2022-06-53.png">
